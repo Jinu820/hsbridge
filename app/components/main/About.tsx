@@ -1,9 +1,9 @@
 const overviewItems = [
-  { en: "GENERALLY", jp: "基本を忘れず" },
-  { en: "NATURALLY", jp: "本質を見極め" },
-  { en: "EXPERIENCE", jp: "経験する" },
-  { en: "INSIGHT", jp: "視野を広く" },
-  { en: "THINKING", jp: "思考の拡張" },
+  { en: "QUALITY", jp: "品質にこだわる" },
+  { en: "DELIVERY", jp: "迅速にお届け" },
+  { en: "SUPPORT", jp: "丁寧なサポート" },
+  { en: "TRUST", jp: "安心の決済・返品" },
+  { en: "VALUE", jp: "お得な価格と特典" },
 ];
 
 const companyInfo = [
@@ -13,15 +13,44 @@ const companyInfo = [
   { label: "CEO", value: "キム ヒョヌク" },
   { label: "CTO", value: "島野 隆史" },
   { label: "本社", value: "東京都新宿区" },
-  { label: "東京事務所", value: "〒160-0023 東京都新宿区西新宿7丁目16 末廣ビル103(営業所)" },
+  {
+    label: "東京事務所",
+    value: "〒160-0023 東京都新宿区西新宿7丁目16 末廣ビル103(営業所)",
+  },
   { label: "関連企業", value: "DOO合同会社 代表社員 郭 煐駿" },
 ];
 
 const roadmap = [
-  { year: "2020", title: "国際 E-Commerce 事業", items: ["02 DOO合同会社 設立", "06 日本酒の販売を開始", "08 営業オフィスに拡大", "09 スニーカー販売開始", "12 アウトドア用品販売開始"] },
-  { year: "2021", title: "年間売り上げ ５億円", items: ["11 営業オフィスを移転", "12 購買代行サービス提供開始"] },
-  { year: "2022", title: "ITサービス 展開", items: ["08 HSBRIGDE株式会社 設立"] },
-  { year: "2023 & MORE", title: "ビジネス成長", items: ["リセール展開", "自社サービス ローンチング予定", "エンジニア増員拡大"] },
+  {
+    year: "2020",
+    title: "国際 E-Commerce 事業",
+    items: [
+      "02 DOO合同会社 設立",
+      "06 日本酒の販売を開始",
+      "08 営業オフィスに拡大",
+      "09 スニーカー販売開始",
+      "12 アウトドア用品販売開始",
+    ],
+  },
+  {
+    year: "2021",
+    title: "年間売り上げ ５億円",
+    items: ["11 営業オフィスを移転", "12 購買代行サービス提供開始"],
+  },
+  {
+    year: "2022",
+    title: "ITサービス 展開",
+    items: ["08 HSBRIGDE株式会社 設立"],
+  },
+  {
+    year: "2023 & MORE",
+    title: "ビジネス成長",
+    items: [
+      "リセール展開",
+      "自社サービス ローンチング予定",
+      "エンジニア増員拡大",
+    ],
+  },
 ];
 
 export default function About() {
@@ -63,19 +92,18 @@ export default function About() {
           </div>
         </div>
 
-        {/* Vision - IT Generalist&apos;s Nest */}
+        {/* Vision - オンラインショップ */}
         <div className="mb-24 rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12">
           <h2 className="mb-6 text-center text-2xl font-semibold text-white md:text-3xl">
-            IT Generalist&apos;s Nest
+            お客様の「欲しい」に、届ける
           </h2>
           <p className="mb-4 text-center text-sm italic text-zinc-400">
-            噛み合い、絡み合う ジェネラリストの住処
+            いつでも、どこでも。安心してお買い物を
           </p>
           <p className="text-center leading-relaxed text-zinc-300">
-            真っ直ぐな枝だけで鳥の巣は建てない。
-            巣を丈夫にするのは周りに絡み合う１本の枝。
-            プロジェクトの完成と成功を支える「巣」を組み合うジェネストは、「融合」の鍵となる。
-            ジェネラリストのネットワークを作ります。
+            厳選した商品を、送料無料・返品保証・安心の決済でお届けします。
+            会員特典やお得な情報も随時お届けし、快適なオンラインショッピングをお手伝いします。
+            ご不明点はお気軽にお問い合わせください。
           </p>
         </div>
 
@@ -86,9 +114,16 @@ export default function About() {
           </h2>
           <div className="space-y-12">
             {roadmap.map((block) => (
-              <div key={block.year} className="border-l-2 border-yellow-500/50 pl-6">
-                <p className="mb-2 text-2xl font-bold text-yellow-400">{block.year}</p>
-                <p className="mb-4 text-sm font-medium text-white">{block.title}</p>
+              <div
+                key={block.year}
+                className="border-l-2 border-yellow-500/50 pl-6"
+              >
+                <p className="mb-2 text-2xl font-bold text-yellow-400">
+                  {block.year}
+                </p>
+                <p className="mb-4 text-sm font-medium text-white">
+                  {block.title}
+                </p>
                 <ul className="space-y-2">
                   {block.items.map((item, i) => (
                     <li key={i} className="text-sm text-zinc-400">

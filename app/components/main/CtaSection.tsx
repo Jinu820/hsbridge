@@ -5,13 +5,13 @@ export default function CtaSection() {
     <section className="border-t border-white/10 bg-black px-4 py-20 sm:px-8 md:py-28">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="mb-4 text-2xl font-semibold text-white md:text-3xl">
-          WE MAKE NEW BUSINESSES
+          いつでも、どこでも。オンラインでお買い物を
         </h2>
         <p className="mb-6 text-zinc-400">
-          開発力が必要な場所に、ビジネスに、お力になります
+          送料無料・返品保証・安心の決済で、快適なお買い物をお届けします
         </p>
         <p className="mb-8 text-sm text-zinc-500">
-          新規事業、新しいビジネスを創造していく いつでもお気軽にお問合せください
+          ご注文・お届け・返品など、お困りのことがあればお気軽にお問い合わせください
         </p>
         <Link
           href="#contact"

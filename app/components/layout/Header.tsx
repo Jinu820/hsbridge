@@ -77,7 +77,9 @@ export default function Header() {
       {/* Mobile menu overlay */}
       <div
         className={`fixed inset-0 top-[57px] z-40 bg-black/95 backdrop-blur-md transition-opacity duration-200 md:hidden ${
-          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          open
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
         aria-hidden={!open}
       >

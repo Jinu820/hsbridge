@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import Image from "next/image";
+import contactImage from "@/app/image/contact_image.jpg";
 
 type ModalStatus = "success" | "error" | null;
 
@@ -51,9 +53,17 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="border-t border-white/10 bg-black px-4 py-20 sm:px-8 md:py-28"
+      className="border-t border-white/10 bg-black px-4 py-20 sm:px-8 md:py-28 relative"
     >
-      <div className="mx-auto max-w-xl">
+      <div className="pointer-events-none absolute inset-0 z-0 opacity-50">
+        <Image src={contactImage} 
+          alt=""
+          fill
+          className="object-cover opacity-40"
+          priority
+        />
+      </div>
+      <div className="relative z-10 mx-auto max-w-xl">
         <h2 className="mb-4 text-center text-2xl font-semibold text-white md:text-3xl">
           CONTACT US
         </h2>
@@ -78,7 +88,7 @@ export default function Contact() {
               required
               value={sendData.name}
               onChange={(e) => handleChange(e)}
-              className="w-full rounded border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-zinc-500 focus:border-yellow-500 focus:outline-none"
+              className="w-full rounded border border-white/20 bg-black px-4 py-3 text-white placeholder-zinc-500 focus:border-yellow-500 focus:outline-none"
               placeholder="お名前"
             />
           </div>
@@ -92,7 +102,7 @@ export default function Contact() {
               required
               value={sendData.email}
               onChange={(e) => handleChange(e)}
-              className="w-full rounded border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-zinc-500 focus:border-yellow-500 focus:outline-none"
+              className="w-full rounded border border-white/20 bg-black px-4 py-3 text-white placeholder-zinc-500 focus:border-yellow-500 focus:outline-none"
               placeholder="メールアドレス"
             />
           </div>
@@ -145,7 +155,7 @@ export default function Contact() {
               required
               value={sendData.title}
               onChange={(e) => handleChange(e)}
-              className="w-full rounded border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-zinc-500 focus:border-yellow-500 focus:outline-none"
+              className="w-full rounded border border-white/20 bg-black px-4 py-3 text-white placeholder-zinc-500 focus:border-yellow-500 focus:outline-none"
               placeholder="メールアドレス"
             />
           </div>
@@ -158,7 +168,7 @@ export default function Contact() {
               required
               rows={5}
               value={sendData.message}
-              className="w-full rounded border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-zinc-500 focus:border-yellow-500 focus:outline-none"
+              className="w-full rounded border border-white/20 bg-black px-4 py-3 text-white placeholder-zinc-500 focus:border-yellow-500 focus:outline-none"
               onChange={(e) => handleChange(e)}
               placeholder="お問い合わせ内容をご記入ください"
             />

@@ -1,15 +1,16 @@
 const positions = [
-  "システムエンジニア",
-  "インフラ",
-  "プロジェクトマネージャ",
-  "プログラマー",
-  "WEBエンジニア",
-  "フロントエンド",
-  "データベース",
-  "セキュリティ",
-  "ネットワーク",
-  "サーバエンジニア",
-  "WEBデザイナー",
+  "ECサイト運営",
+  "カスタマーサポート",
+  "発送・梱包",
+  "在庫管理",
+  "商品撮影・掲載",
+  "ウェブ担当",
+  "マーケティング",
+  "バイヤー・仕入れ",
+  "返品・交換対応",
+  "会員サポート",
+  "コンテンツ制作",
+  "物流・倉庫",
 ];
 
 export default function Recruit() {
@@ -25,9 +26,7 @@ export default function Recruit() {
         <p className="mb-12 text-center text-lg font-medium text-yellow-400">
           WELCOME TO NEW CHALLENGER
         </p>
-        <p className="mb-12 text-center text-sm text-zinc-400">
-          積極採用中
-        </p>
+        <p className="mb-12 text-center text-sm text-zinc-400">積極採用中</p>
         <div className="flex flex-wrap justify-center gap-4">
           {positions.map((pos) => (
             <span

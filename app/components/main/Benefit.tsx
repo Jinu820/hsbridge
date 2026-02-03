@@ -41,7 +41,9 @@ export default function Benefit() {
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-lg font-medium text-yellow-400">社員向け</h3>
+            <h3 className="mb-4 text-lg font-medium text-yellow-400">
+              社員向け
+            </h3>
             <ul className="space-y-2 text-sm text-zinc-400">
               {benefitEmployee.map((item, i) => (
                 <li key={i}>{item}</li>

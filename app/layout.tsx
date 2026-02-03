@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "HSBRIGDE",
-  description: "「本質」を見極め、常に「思考」する。HSBRIGDE株式会社 オフィシャルサイト",
+  description:
+    "「本質」を見極め、常に「思考」する。HSBRIGDE株式会社 オフィシャルサイト",
 };
 
 export default function RootLayout({

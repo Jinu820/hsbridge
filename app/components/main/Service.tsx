@@ -1,27 +1,23 @@
-import Link from "next/link";
-
 const services = [
   {
-    title: "System Engineering Service",
-    sub: "システムエンジニアリングサービス（SES)",
-    desc: "多種多様なITエンジニア人材を保有しており、お客様のご要望に沿うサービスをご提供致します。",
+    title: "送料無料・快速配送",
+    sub: "お届け",
+    desc: "ご購入金額に応じて送料無料。午前中のご注文は当日発送。追跡番号で配送状況をいつでも確認でき、お届け日時の指定も可能です。",
   },
   {
-    title: "All In One Groupware",
-    sub: "SaaS型統合協業ツール",
-    desc: "Dooray!ひとつで全ての業務が可能に。メッセンジャー、ビデオチャット、メールから人事・決済まで、企業に必要なすべてがこれ一つで揃います。",
-    link: "Dooray! を詳しく見る",
+    title: "安心の返品・交換",
+    sub: "返品保証",
+    desc: "未使用・未開封の商品は30日間返品可能。不良品は無料で交換いたします。ご不明点はカスタマーサポートまでお気軽にどうぞ。",
   },
   {
-    title: "Resale",
-    sub: "Amazon Web Service / Google Cloud Platform",
-    desc: "AWS・GCPをご検討中でしたら、HSBRIDGE(株)経由でのご契約が最もお得で最安値です。（例：10%割引）ぜひお問い合わせください。",
-    link: "問い合わせる",
+    title: "各種お支払い",
+    sub: "お支払い方法",
+    desc: "クレジットカード、コンビニ払い、代引き、後払い、各種電子マネーなど、お客様の都合に合わせてお選びいただけます。",
   },
   {
-    title: "IN HOUSE APPLICATION",
-    sub: "自社サービス(WEB・アプリ)",
-    desc: "来年度自社アプリローンチング準備中 2025年予定",
+    title: "会員特典・お得な情報",
+    sub: "会員サービス",
+    desc: "会員登録でポイント還元や限定セールのご案内。新着商品・おすすめ情報をメールでお届けし、よりお得にお買い物いただけます。",
   },
 ];
 
@@ -35,7 +31,7 @@ export default function Service() {
         <h2 className="mb-14 text-center text-2xl font-semibold text-white md:text-3xl">
           OUR SERVICES
         </h2>
-        <div className="space-y-16">
+        <div className="space-y-8">
           {services.map((svc) => (
             <div
               key={svc.title}
@@ -45,15 +41,7 @@ export default function Service() {
                 {svc.title}
               </h3>
               <p className="mb-4 text-sm text-zinc-500">{svc.sub}</p>
-              <p className="mb-6 leading-relaxed text-zinc-300">{svc.desc}</p>
-              {svc.link && (
-                <Link
-                  href="#contact"
-                  className="inline-block text-sm font-medium text-yellow-400 underline underline-offset-4 hover:text-yellow-300"
-                >
-                  {svc.link}
-                </Link>
-              )}
+              <p className="leading-relaxed text-zinc-300">{svc.desc}</p>
             </div>
           ))}
         </div>

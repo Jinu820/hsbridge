@@ -1,26 +1,48 @@
 const points = [
   {
-    title: "専属フリーランス平均還元率",
-    value: "95%",
-    sub: "地上最大還元率実現",
-    items: ["単価連動型", "通常 85～95% +α", "スペシャル還元 最大99％", "専門キャリアコンサルティング"],
+    title: "送料",
+    value: "無料",
+    sub: "購入金額5,000円以上で送料無料",
+    items: [
+      "全国送料無料",
+      "沖縄・離島も対応",
+      "翌日配送オプションあり",
+      "お届け日時指定可能",
+    ],
   },
   {
-    title: "社員平均還元率",
-    value: "80%",
-    sub: "地上最大還元率実現",
-    items: ["単価連動型", "通常 65～80% +α", "スペシャル還元 最大85％", "専門キャリアコンサルティング"],
+    title: "返品・交換",
+    value: "30日間",
+    sub: "安心の返品保証",
+    items: [
+      "未使用・未開封に限り30日間返品可",
+      "不良品は無料交換",
+      "返送料はお客様負担",
+      "丁寧なサポート対応",
+    ],
   },
   {
-    title: "保有案件",
-    value: "大量",
-    items: ["バックエンド案件", "フロントエンド案件", "EC・金融・通信", "インフラ・セキュリティ", "事務・SNS・デザイン…", "その他"],
+    title: "お支払い方法",
+    value: "各種対応",
+    items: [
+      "クレジットカード",
+      "コンビニ払い・ATM",
+      "代引き",
+      "後払い（NP後払い）",
+      "各種電子マネー",
+      "銀行振込",
+    ],
   },
   {
-    title: "制限事項",
-    value: "無し",
-    sub: "国籍、年齢、性別",
-    items: ["プロジェクトに関係のないすべてのものに気を使う余裕など、当社にはありません。"],
+    title: "発送",
+    value: "即日発送",
+    sub: "午前中のご注文は当日発送",
+    items: [
+      "在庫豊富でお届けが早い",
+      "追跡番号で配送状況を確認可能",
+      "土日祝も発送対応",
+      "ギフト・のし対応",
+    ],
   },
 ];
 
@@ -40,15 +62,21 @@ export default function Point() {
               <p className="mb-2 text-xs uppercase tracking-wider text-zinc-500">
                 {card.title}
               </p>
-              <p className="mb-2 text-3xl font-bold text-yellow-400 md:text-4xl">
+              <p className="mb-2 text-lg font-bold text-yellow-400 md:text-4xl">
                 {card.value}
               </p>
               {card.sub && (
-                <p className="mb-4 text-sm text-zinc-400">- {card.sub}</p>
+                <p className="mb-1.5 text-sm text-zinc-400 flex gap-1">
+                  <span>-</span>
+                  <span>{card.sub}</span>
+                </p>
               )}
               <ul className="space-y-1.5 text-sm text-zinc-400">
                 {card.items.map((item, i) => (
-                  <li key={i}>- {item}</li>
+                  <li key={i} className="flex gap-1">
+                    <span>-</span>
+                    <span>{item}</span>
+                  </li>
                 ))}
               </ul>
             </div>
