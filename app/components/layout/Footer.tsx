@@ -1,12 +1,12 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const links = [
-  { label: "TOP", href: "#top" },
-  { label: "NEWS", href: "#news" },
-  { label: "ABOUT", href: "#about" },
-  { label: "SERVICES", href: "#services" },
-  { label: "RECRUIT", href: "#recruit" },
-  { label: "CONTACT", href: "#contact" },
+  { label: 'TOP', href: '#top' },
+  { label: 'NEWS', href: '#news' },
+  { label: 'ABOUT', href: '#about' },
+  { label: 'SERVICES', href: '#services' },
+  { label: 'RECRUIT', href: '#recruit' },
+  { label: 'CONTACT', href: '#contact' },
 ];
 
 export default function Footer() {

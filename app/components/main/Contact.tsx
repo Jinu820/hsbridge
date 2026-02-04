@@ -1,23 +1,25 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
-import Image from "next/image";
-import contactImage from "@/app/image/contact_image.jpg";
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import Image from 'next/image';
+import contactImage from '@/app/image/contact_image.jpg';
 
-type ModalStatus = "success" | "error" | null;
+type ModalStatus = 'success' | 'error' | null;
 
 export default function Contact() {
   const [sendData, setSendData] = useState({
-    name: "",
-    email: "",
-    message: "",
-    title: "",
+    name: '',
+    email: '',
+    message: '',
+    title: '',
   });
   const [modal, setModal] = useState<ModalStatus>(null);
   const [sending, setSending] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setSendData((prev) => ({
       ...prev,
       [e.target.id]: e.target.value,
@@ -33,17 +35,17 @@ export default function Contact() {
     setSending(true);
     emailjs
       .send(
-        "service_n115y76",
-        "template_phln552",
+        'service_n115y76',
+        'template_phln552',
         templateParams,
-        "3_Gx2m4MoPPlXHOFc"
+        '3_Gx2m4MoPPlXHOFc',
       )
       .then(() => {
-        setModal("success");
-        setSendData({ name: "", email: "", message: "", title: "" });
+        setModal('success');
+        setSendData({ name: '', email: '', message: '', title: '' });
       })
       .catch(() => {
-        setModal("error");
+        setModal('error');
       })
       .finally(() => {
         setSending(false);
@@ -75,10 +77,7 @@ export default function Contact() {
           <p>総合窓口 : info@hsbridgeinc.com</p>
           <p>採用窓口 : recruit@hsbridgeinc.com</p>
         </div>
-        <form
-          className="space-y-6"
-          onSubmit={(e) => e.preventDefault()}
-        >
+        <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
           <div>
             <label htmlFor="name" className="mb-2 block text-sm text-zinc-600">
               NAME <span className="text-red-400">*</span>
@@ -161,7 +160,10 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label htmlFor="message" className="mb-2 block text-sm text-zinc-600">
+            <label
+              htmlFor="message"
+              className="mb-2 block text-sm text-zinc-600"
+            >
               MESSAGE <span className="text-red-400">*</span>
             </label>
             <textarea
@@ -180,7 +182,7 @@ export default function Contact() {
             disabled={sending}
             className="w-full rounded-full bg-amber-500 py-4 text-sm font-semibold uppercase tracking-widest text-black transition hover:bg-amber-600 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {sending ? "送信中..." : "Submit"}
+            {sending ? '送信中...' : 'Submit'}
           </button>
         </form>
       </div>
@@ -199,9 +201,9 @@ export default function Contact() {
             onClick={(e) => e.stopPropagation()}
           >
             <h3 id="modal-title" className="sr-only">
-              {modal === "success" ? "送信完了" : "送信失敗"}
+              {modal === 'success' ? '送信完了' : '送信失敗'}
             </h3>
-            {modal === "success" ? (
+            {modal === 'success' ? (
               <>
                 <p className="mb-4 text-center text-lg font-medium text-black">
                   送信が完了しました。

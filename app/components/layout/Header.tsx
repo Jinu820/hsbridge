@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 
 const navItems = [
-  { label: "TOP", href: "#top" },
-  { label: "ABOUT", href: "#about" },
-  { label: "RECRUIT", href: "#recruit" },
-  { label: "SERVICES", href: "#services" },
+  { label: 'TOP', href: '#top' },
+  { label: 'ABOUT', href: '#about' },
+  { label: 'RECRUIT', href: '#recruit' },
+  { label: 'SERVICES', href: '#services' },
   // { label: "NEWS", href: "#news" },
-  { label: "CONTACT", href: "#contact" },
+  { label: 'CONTACT', href: '#contact' },
 ];
 
 function MenuIcon({ open }: { open: boolean }) {
@@ -16,17 +16,17 @@ function MenuIcon({ open }: { open: boolean }) {
     <span className="relative flex h-5 w-6 items-center justify-center">
       <span
         className={`absolute h-0.5 w-5 bg-black transition-all duration-200 ${
-          open ? "top-1/2 -translate-y-1/2 rotate-45" : "top-0"
+          open ? 'top-1/2 -translate-y-1/2 rotate-45' : 'top-0'
         }`}
       />
       <span
         className={`absolute top-1/2 h-0.5 w-5 -translate-y-1/2 bg-black transition-all duration-200 ${
-          open ? "opacity-0" : "opacity-100"
+          open ? 'opacity-0' : 'opacity-100'
         }`}
       />
       <span
         className={`absolute h-0.5 w-5 bg-black transition-all duration-200 ${
-          open ? "top-1/2 -translate-y-1/2 -rotate-45" : "bottom-0"
+          open ? 'top-1/2 -translate-y-1/2 -rotate-45' : 'bottom-0'
         }`}
       />
     </span>
@@ -65,7 +65,7 @@ export default function Header() {
         {/* Mobile menu button */}
         <button
           type="button"
-          aria-label={open ? "メニューを閉じる" : "メニューを開く"}
+          aria-label={open ? 'メニューを閉じる' : 'メニューを開く'}
           aria-expanded={open}
           className="flex h-10 w-10 items-center justify-center md:hidden"
           onClick={() => setOpen((prev) => !prev)}
@@ -78,8 +78,8 @@ export default function Header() {
       <div
         className={`fixed inset-0 top-[57px] z-40 bg-white/95 backdrop-blur-md transition-opacity duration-200 md:hidden ${
           open
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
+            ? 'opacity-100 pointer-events-auto'
+            : 'opacity-0 pointer-events-none'
         }`}
         aria-hidden={!open}
       >

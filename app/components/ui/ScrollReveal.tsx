@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 
 type ScrollRevealProps = {
   children: ReactNode;
@@ -17,7 +17,7 @@ type ScrollRevealProps = {
 
 export default function ScrollReveal({
   children,
-  className = "",
+  className = '',
   offset = 24,
   threshold = 0.1,
   once = true,
@@ -41,7 +41,7 @@ export default function ScrollReveal({
           }
         });
       },
-      { threshold, rootMargin: "0px 0px -40px 0px" }
+      { threshold, rootMargin: '0px 0px -40px 0px' },
     );
 
     observer.observe(el);
@@ -54,7 +54,7 @@ export default function ScrollReveal({
       className={className}
       style={{
         opacity: isVisible ? 1 : 0,
-        transform: isVisible ? "translateY(0)" : `translateY(${offset}px)`,
+        transform: isVisible ? 'translateY(0)' : `translateY(${offset}px)`,
         transition: `opacity ${duration}ms ease-out, transform ${duration}ms ease-out`,
       }}
     >

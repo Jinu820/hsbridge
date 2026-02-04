@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-import dhlImage from "@/app/image/dhl.jpg";
-import jordan from "@/app/image/jordan.jpg";
-import dunk from "@/app/image/nike_dunk.jpg";
+import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
+import dhlImage from '@/app/image/dhl.jpg';
+import jordan from '@/app/image/jordan.jpg';
+import dunk from '@/app/image/nike_dunk.jpg';
 
 const slides = [
-  { src: dhlImage, alt: "DHL配送パートナー - 迅速で安心のお届けサービス" },
-  { src: jordan, alt: "エアジョーダン - プレミアムスニーカーコレクション" },
-  { src: dunk, alt: "ナイキダンク - スタイリッシュなスニーカー" },
+  { src: dhlImage, alt: 'DHL配送パートナー - 迅速で安心のお届けサービス' },
+  { src: jordan, alt: 'エアジョーダン - プレミアムスニーカーコレクション' },
+  { src: dunk, alt: 'ナイキダンク - スタイリッシュなスニーカー' },
 ];
 
 export default function Top() {
@@ -79,7 +79,7 @@ export default function Top() {
                 aria-label={`슬라이드 ${i + 1}`}
                 onClick={() => setCurrent(i)}
                 className={`h-2 w-2 rounded-full transition-colors ${
-                  i === current ? "bg-white shadow" : "bg-white/50"
+                  i === current ? 'bg-white shadow' : 'bg-white/50'
                 }`}
               />
             ))}
