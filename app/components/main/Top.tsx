@@ -7,9 +7,9 @@ import jordan from "@/app/image/jordan.jpg";
 import dunk from "@/app/image/nike_dunk.jpg";
 
 const slides = [
-  { src: dhlImage, alt: "" },
-  { src: jordan, alt: "" },
-  { src: dunk, alt: "" },
+  { src: dhlImage, alt: "DHL配送パートナー - 迅速で安心のお届けサービス" },
+  { src: jordan, alt: "エアジョーダン - プレミアムスニーカーコレクション" },
+  { src: dunk, alt: "ナイキダンク - スタイリッシュなスニーカー" },
 ];
 
 export default function Top() {

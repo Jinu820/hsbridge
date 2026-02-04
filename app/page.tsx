@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { ScrollReveal } from "@/app/components/ui";
 import About from "@/app/components/main/About";
 import Benefit from "@/app/components/main/Benefit";
@@ -8,6 +9,17 @@ import Point from "@/app/components/main/Point";
 import Recruit from "@/app/components/main/Recruit";
 import Service from "@/app/components/main/Service";
 import Top from "@/app/components/main/Top";
+
+export const metadata: Metadata = {
+  title: "ホーム",
+  description:
+    "送料無料・返品保証・安心の決済で、厳選した商品をお届けします。通販・EC、店舗販売、法人営業、物販・リセールまで対応。",
+  openGraph: {
+    title: "HSBRIGDE - 選べる。届く。安心する。",
+    description:
+      "送料無料・返品保証・安心の決済で、厳選した商品をお届けします。",
+  },
+};
 
 export default function Home() {
   return (

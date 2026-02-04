@@ -56,8 +56,9 @@ export default function Contact() {
       className="relative border-t border-zinc-200 bg-white px-4 py-20 sm:px-8 md:py-28"
     >
       <div className="pointer-events-none absolute inset-0 z-0 opacity-50">
-        <Image src={contactImage} 
-          alt=""
+        <Image
+          src={contactImage}
+          alt="お問い合わせ - HSBRIGDEカスタマーサポート"
           fill
           className="object-cover opacity-10"
           priority
