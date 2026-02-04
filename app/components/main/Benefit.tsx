@@ -16,35 +16,35 @@ const benefitEmployee = [
 
 export default function Benefit() {
   return (
-    <section className="border-t border-white/10 bg-black px-4 py-20 sm:px-8 md:py-28">
+    <section className="border-t border-zinc-200 bg-white px-4 py-20 sm:px-8 md:py-28">
       <div className="mx-auto max-w-3xl">
-        <h2 className="mb-14 text-center text-2xl font-semibold text-white md:text-3xl">
+        <h2 className="mb-14 text-center text-2xl font-semibold text-black md:text-3xl">
           BENEFIT
         </h2>
         <div className="space-y-10">
           <div>
-            <h3 className="mb-4 text-lg font-medium text-yellow-400">共通</h3>
-            <ul className="space-y-2 text-sm text-zinc-400">
+            <h3 className="mb-4 text-lg font-medium text-amber-600">共通</h3>
+            <ul className="space-y-2 text-sm text-zinc-600">
               {benefitCommon.map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-lg font-medium text-yellow-400">
+            <h3 className="mb-4 text-lg font-medium text-amber-600">
               専属フリーランス向け
             </h3>
-            <ul className="space-y-2 text-sm text-zinc-400">
+            <ul className="space-y-2 text-sm text-zinc-600">
               {benefitFreelance.map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
           </div>
           <div>
-            <h3 className="mb-4 text-lg font-medium text-yellow-400">
+            <h3 className="mb-4 text-lg font-medium text-amber-600">
               社員向け
             </h3>
-            <ul className="space-y-2 text-sm text-zinc-400">
+            <ul className="space-y-2 text-sm text-zinc-600">
               {benefitEmployee.map((item, i) => (
                 <li key={i}>{item}</li>
               ))}

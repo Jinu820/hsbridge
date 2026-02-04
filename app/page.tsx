@@ -1,3 +1,4 @@
+import { ScrollReveal } from "@/app/components/ui";
 import About from "@/app/components/main/About";
 import Benefit from "@/app/components/main/Benefit";
 import Contact from "@/app/components/main/Contact";
@@ -10,16 +11,30 @@ import Top from "@/app/components/main/Top";
 
 export default function Home() {
   return (
-    <div className="min-h-full bg-black text-white">
+    <div className="min-h-full bg-white text-black">
       <Top />
-      <About />
-      <Point />
-      <Recruit />
-      <Service />
-      <CtaSection />
-      <Benefit />
+      <ScrollReveal once={false}>
+        <About />
+      </ScrollReveal>
+      <ScrollReveal once={false}>
+        <Point />
+      </ScrollReveal>
+      <ScrollReveal once={false}>
+        <Recruit />
+      </ScrollReveal>
+      <ScrollReveal once={false}>
+        <Service />
+      </ScrollReveal>
+      <ScrollReveal once={false}>
+        <CtaSection />
+      </ScrollReveal>
+      <ScrollReveal once={false}>
+        <Benefit />
+      </ScrollReveal>
       {/* <News /> */}
-      <Contact />
+      <ScrollReveal once={false}>
+        <Contact />
+      </ScrollReveal>
     </div>
   );
 }

@@ -55,20 +55,20 @@ const roadmap = [
 
 export default function About() {
   return (
-    <section id="about" className="bg-black px-4 py-20 sm:px-8 md:py-28">
+    <section id="about" className="bg-white px-4 py-20 sm:px-8 md:py-28">
       <div className="mx-auto max-w-4xl">
         {/* PULL THE TRIGGER / Company info */}
         <div className="mb-24">
-          <h2 className="mb-12 text-center text-3xl font-semibold tracking-tight text-white md:text-4xl">
+          <h2 className="mb-12 text-center text-3xl font-semibold tracking-tight text-black md:text-4xl">
             PULL THE TRIGGER
           </h2>
           <div className="grid gap-6 sm:grid-cols-2">
             {companyInfo.map((row) => (
-              <div key={row.label} className="border-b border-white/10 pb-4">
-                <p className="mb-1 text-xs uppercase tracking-wider text-zinc-500">
+              <div key={row.label} className="border-b border-zinc-200 pb-4">
+                <p className="mb-1 text-xs uppercase tracking-wider text-zinc-600">
                   {row.label}
                 </p>
-                <p className="text-sm text-white">{row.value}</p>
+                <p className="text-sm text-black">{row.value}</p>
               </div>
             ))}
           </div>
@@ -76,31 +76,31 @@ export default function About() {
 
         {/* OVERVIEW */}
         <div className="mb-24">
-          <p className="mb-2 text-center text-xs uppercase tracking-[0.3em] text-zinc-500">
+          <p className="mb-2 text-center text-xs uppercase tracking-[0.3em] text-zinc-600">
             大事にする価値
           </p>
-          <h2 className="mb-14 text-center text-2xl font-semibold text-white md:text-3xl">
+          <h2 className="mb-14 text-center text-2xl font-semibold text-black md:text-3xl">
             会社概要 / OVERVIEW
           </h2>
           <div className="flex flex-wrap justify-center gap-8 sm:gap-12">
             {overviewItems.map((item) => (
               <div key={item.en} className="text-center">
-                <p className="text-lg font-medium text-yellow-400">{item.en}</p>
-                <p className="mt-1 text-sm text-zinc-400">{item.jp}</p>
+                <p className="text-lg font-medium text-amber-600">{item.en}</p>
+                <p className="mt-1 text-sm text-zinc-600">{item.jp}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* Vision - オンラインショップ */}
-        <div className="mb-24 rounded-2xl border border-white/10 bg-white/5 p-8 md:p-12">
-          <h2 className="mb-6 text-center text-2xl font-semibold text-white md:text-3xl">
+        <div className="mb-24 rounded-2xl border border-zinc-200 bg-zinc-100 p-8 md:p-12">
+          <h2 className="mb-6 text-center text-2xl font-semibold text-black md:text-3xl">
             お客様の「欲しい」に、届ける
           </h2>
-          <p className="mb-4 text-center text-sm italic text-zinc-400">
+          <p className="mb-4 text-center text-sm italic text-zinc-600">
             いつでも、どこでも。安心してお買い物を
           </p>
-          <p className="text-center leading-relaxed text-zinc-300">
+          <p className="text-center leading-relaxed text-zinc-700">
             厳選した商品を、送料無料・返品保証・安心の決済でお届けします。
             会員特典やお得な情報も随時お届けし、快適なオンラインショッピングをお手伝いします。
             ご不明点はお気軽にお問い合わせください。
@@ -108,25 +108,25 @@ export default function About() {
         </div>
 
         {/* ROAD MAP */}
-        <div>
-          <h2 className="mb-12 text-center text-2xl font-semibold text-white md:text-3xl">
+        <div className="mt-16 border-t border-zinc-200 pt-16">
+          <h2 className="mb-12 text-center text-2xl font-semibold text-black md:text-3xl">
             ROAD MAP
           </h2>
           <div className="space-y-12">
             {roadmap.map((block) => (
               <div
                 key={block.year}
-                className="border-l-2 border-yellow-500/50 pl-6"
+                className="border-l-2 border-amber-500/60 pl-6"
               >
-                <p className="mb-2 text-2xl font-bold text-yellow-400">
+                <p className="mb-2 text-2xl font-bold text-amber-600">
                   {block.year}
                 </p>
-                <p className="mb-4 text-sm font-medium text-white">
+                <p className="mb-4 text-sm font-medium text-black">
                   {block.title}
                 </p>
                 <ul className="space-y-2">
                   {block.items.map((item, i) => (
-                    <li key={i} className="text-sm text-zinc-400">
+                    <li key={i} className="text-sm text-zinc-600">
                       {item}
                     </li>
                   ))}

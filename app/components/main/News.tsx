@@ -17,22 +17,22 @@ export default function News() {
   return (
     <section
       id="news"
-      className="border-t border-white/10 bg-black px-4 py-20 sm:px-8 md:py-28"
+      className="border-t border-zinc-200 bg-white px-4 py-20 sm:px-8 md:py-28"
     >
       <div className="mx-auto max-w-3xl">
-        <h2 className="mb-14 text-center text-2xl font-semibold text-white md:text-3xl">
+        <h2 className="mb-14 text-center text-2xl font-semibold text-black md:text-3xl">
           News
         </h2>
         <ul className="space-y-6">
           {newsItems.map((item) => (
             <li
               key={item.title}
-              className="flex flex-col gap-1 border-b border-white/10 pb-6 sm:flex-row sm:items-center sm:justify-between"
+              className="flex flex-col gap-1 border-b border-zinc-200 pb-6 sm:flex-row sm:items-center sm:justify-between"
             >
-              <span className="text-sm text-white hover:text-yellow-400">
+              <span className="text-sm text-black hover:text-amber-600">
                 {item.title}
               </span>
-              <span className="text-xs text-zinc-500">{item.date}</span>
+              <span className="text-xs text-zinc-600">{item.date}</span>
             </li>
           ))}
         </ul>

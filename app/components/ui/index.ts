@@ -1,2 +1,2 @@
 // UI 컴포넌트 barrel
-// 예: export { Button } from "./Button";
+export { default as ScrollReveal } from "./ScrollReveal";

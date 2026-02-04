@@ -25,23 +25,23 @@ export default function Service() {
   return (
     <section
       id="services"
-      className="border-t border-white/10 bg-black px-4 py-20 sm:px-8 md:py-28"
+      className="border-t border-zinc-200 bg-white px-4 py-20 sm:px-8 md:py-28"
     >
       <div className="mx-auto max-w-4xl">
-        <h2 className="mb-14 text-center text-2xl font-semibold text-white md:text-3xl">
+        <h2 className="mb-14 text-center text-2xl font-semibold text-black md:text-3xl">
           OUR SERVICES
         </h2>
         <div className="space-y-8">
           {services.map((svc) => (
             <div
               key={svc.title}
-              className="rounded-xl border border-white/10 bg-white/5 p-8 md:p-10"
+              className="rounded-xl border border-zinc-200 bg-zinc-100 p-8 md:p-10"
             >
-              <h3 className="mb-2 text-xl font-semibold text-yellow-400">
+              <h3 className="mb-2 text-xl font-semibold text-amber-600">
                 {svc.title}
               </h3>
-              <p className="mb-4 text-sm text-zinc-500">{svc.sub}</p>
-              <p className="leading-relaxed text-zinc-300">{svc.desc}</p>
+              <p className="mb-4 text-sm text-zinc-600">{svc.sub}</p>
+              <p className="leading-relaxed text-zinc-700">{svc.desc}</p>
             </div>
           ))}
         </div>

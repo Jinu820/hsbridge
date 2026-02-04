@@ -48,30 +48,30 @@ const points = [
 
 export default function Point() {
   return (
-    <section className="border-t border-white/10 bg-black px-4 py-20 sm:px-8 md:py-28">
+    <section className="border-t border-zinc-200 bg-white px-4 py-20 sm:px-8 md:py-28">
       <div className="mx-auto max-w-5xl">
-        <h2 className="mb-14 text-center text-2xl font-semibold text-white md:text-3xl">
+        <h2 className="mb-14 text-center text-2xl font-semibold text-black md:text-3xl">
           POINT
         </h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {points.map((card) => (
             <div
               key={card.title}
-              className="rounded-xl border border-white/10 bg-white/5 p-6 transition hover:border-yellow-500/30"
+              className="rounded-xl border border-zinc-200 bg-zinc-100 p-6 transition hover:border-amber-500/50"
             >
-              <p className="mb-2 text-xs uppercase tracking-wider text-zinc-500">
+              <p className="mb-2 text-xs uppercase tracking-wider text-zinc-600">
                 {card.title}
               </p>
-              <p className="mb-2 text-lg font-bold text-yellow-400 md:text-4xl">
+              <p className="mb-2 text-lg font-bold text-amber-600 md:text-4xl">
                 {card.value}
               </p>
               {card.sub && (
-                <p className="mb-1.5 text-sm text-zinc-400 flex gap-1">
+                <p className="mb-1.5 text-sm text-zinc-600 flex gap-1">
                   <span>-</span>
                   <span>{card.sub}</span>
                 </p>
               )}
-              <ul className="space-y-1.5 text-sm text-zinc-400">
+              <ul className="space-y-1.5 text-sm text-zinc-600">
                 {card.items.map((item, i) => (
                   <li key={i} className="flex gap-1">
                     <span>-</span>

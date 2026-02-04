@@ -15,17 +15,17 @@ function MenuIcon({ open }: { open: boolean }) {
   return (
     <span className="relative flex h-5 w-6 items-center justify-center">
       <span
-        className={`absolute h-0.5 w-5 bg-white transition-all duration-200 ${
+        className={`absolute h-0.5 w-5 bg-black transition-all duration-200 ${
           open ? "top-1/2 -translate-y-1/2 rotate-45" : "top-0"
         }`}
       />
       <span
-        className={`absolute top-1/2 h-0.5 w-5 -translate-y-1/2 bg-white transition-all duration-200 ${
+        className={`absolute top-1/2 h-0.5 w-5 -translate-y-1/2 bg-black transition-all duration-200 ${
           open ? "opacity-0" : "opacity-100"
         }`}
       />
       <span
-        className={`absolute h-0.5 w-5 bg-white transition-all duration-200 ${
+        className={`absolute h-0.5 w-5 bg-black transition-all duration-200 ${
           open ? "top-1/2 -translate-y-1/2 -rotate-45" : "bottom-0"
         }`}
       />
@@ -39,12 +39,12 @@ export default function Header() {
   const closeMenu = () => setOpen(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/90 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-zinc-200 bg-white/90 backdrop-blur-sm">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-8">
         <a
           href="#top"
           onClick={closeMenu}
-          className="text-lg font-semibold tracking-wide text-white"
+          className="text-lg font-semibold tracking-wide text-black"
         >
           HSBRIGDE Inc.
         </a>
@@ -55,7 +55,7 @@ export default function Header() {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm tracking-widest text-zinc-400 transition hover:text-white"
+              className="text-sm tracking-widest text-zinc-600 transition hover:text-black"
             >
               {item.label}
             </a>
@@ -76,20 +76,20 @@ export default function Header() {
 
       {/* Mobile menu overlay */}
       <div
-        className={`fixed inset-0 top-[57px] z-40 bg-black/95 backdrop-blur-md transition-opacity duration-200 md:hidden ${
+        className={`fixed inset-0 top-[57px] z-40 bg-white/95 backdrop-blur-md transition-opacity duration-200 md:hidden ${
           open
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
         }`}
         aria-hidden={!open}
       >
-        <ul className="bg-black flex flex-col gap-1 px-4 py-6">
+        <ul className="flex flex-col gap-1 bg-white px-4 py-6">
           {navItems.map((item) => (
             <li key={item.label}>
               <a
                 href={item.href}
                 onClick={closeMenu}
-                className="block rounded-lg px-4 py-3 text-base tracking-widest text-zinc-400 transition hover:bg-white/5 hover:text-white"
+                className="block rounded-lg px-4 py-3 text-base tracking-widest text-zinc-600 transition hover:bg-zinc-100 hover:text-black"
               >
                 {item.label}
               </a>
