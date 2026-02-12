@@ -40,9 +40,6 @@ export default function Home() {
       <ScrollReveal once={false}>
         <CtaSection />
       </ScrollReveal>
-      <ScrollReveal once={false}>
-        <Benefit />
-      </ScrollReveal>
       {/* <News /> */}
       <ScrollReveal once={false}>
         <Contact />
